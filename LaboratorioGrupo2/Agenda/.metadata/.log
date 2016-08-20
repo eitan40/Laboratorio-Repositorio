@@ -1,0 +1,604 @@
+!SESSION 2016-08-20 12:57:45.499 -----------------------------------------------
+eclipse.buildId=4.4.1.M20140925-0400
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_AR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jpt.dbws.eclipselink.ui 4 0 2016-08-20 12:57:47.110
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jpt.dbws.eclipselink.ui [394]
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.eclipse.jpt.dbws.eclipselink.ui [osgi.identity; osgi.identity="org.eclipse.jpt.dbws.eclipselink.ui"; type="osgi.bundle"; version:Version="1.1.100.v201308271450"; singleton:="true"] because it is exposed to package 'javax.xml.bind' from resources org.eclipse.osgi [osgi.identity; osgi.identity="org.eclipse.osgi"; type="osgi.bundle"; version:Version="3.10.1.v20140909-1633"; singleton:="true"] and javax.xml.bind [osgi.identity; osgi.identity="javax.xml.bind"; type="osgi.bundle"; version:Version="2.1.9.v201005080401"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.jpt.dbws.eclipselink.ui [osgi.identity; osgi.identity="org.eclipse.jpt.dbws.eclipselink.ui"; type="osgi.bundle"; version:Version="1.1.100.v201308271450"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.eclipse.wst.common.project.facet.ui)(&(bundle-version>=1.3.0)(!(bundle-version>=2.0.0))))
+     |
+    provide: osgi.wiring.bundle: org.eclipse.wst.common.project.facet.ui
+  org.eclipse.osgi [osgi.identity; osgi.identity="org.eclipse.osgi"; type="osgi.bundle"; version:Version="3.10.1.v20140909-1633"; singleton:="true"]
+
+Chain 2:
+  org.eclipse.jpt.dbws.eclipselink.ui [osgi.identity; osgi.identity="org.eclipse.jpt.dbws.eclipselink.ui"; type="osgi.bundle"; version:Version="1.1.100.v201308271450"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.eclipse.persistence.dbws.builder)(&(bundle-version>=2.3.0)(!(bundle-version>=3.0.0))))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="2.6.0.v20140809-296a69f"; osgi.wiring.bundle="org.eclipse.persistence.dbws.builder"
+  org.eclipse.persistence.dbws.builder [osgi.identity; osgi.identity="org.eclipse.persistence.dbws.builder"; type="osgi.bundle"; version:Version="2.6.0.v20140809-296a69f"]
+    import: (osgi.wiring.package=javax.xml.bind)
+     |
+    export: osgi.wiring.package: javax.xml.bind
+  javax.xml.bind [osgi.identity; osgi.identity="javax.xml.bind"; type="osgi.bundle"; version:Version="2.1.9.v201005080401"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.m2e.logback.configuration 2 0 2016-08-20 12:57:57.620
+!MESSAGE Exception while setting up logging:org.eclipse.osgi.internal.framework.EquinoxConfiguration$1 cannot be cast to java.lang.String
+!STACK 0
+java.lang.ClassCastException: org.eclipse.osgi.internal.framework.EquinoxConfiguration$1 cannot be cast to java.lang.String
+	at org.eclipse.m2e.logback.configuration.LogHelper.logJavaProperties(LogHelper.java:26)
+	at org.eclipse.m2e.logback.configuration.LogPlugin.loadConfiguration(LogPlugin.java:189)
+	at org.eclipse.m2e.logback.configuration.LogPlugin.configureLogback(LogPlugin.java:144)
+	at org.eclipse.m2e.logback.configuration.LogPlugin.access$2(LogPlugin.java:107)
+	at org.eclipse.m2e.logback.configuration.LogPlugin$1.run(LogPlugin.java:62)
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+
+!ENTRY org.eclipse.jface 2 0 2016-08-20 12:57:59.664
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-08-20 12:57:59.664
+!MESSAGE A conflict occurred for ALT+C:
+Binding(ALT+C,
+	ParameterizedCommand(Command(org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.copycolumn,Copy,
+		,
+		Category(org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaedtor.10x,ASA 9.x table schema editor,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1b1820d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+C,
+	ParameterizedCommand(Command(net.sf.eclipsensis.commands.NSISPopupCompile,Compile,
+		Compile NSIS script,
+		Category(net.sf.eclipsensis.NSISCategory,EclipseNSIS,EclipseNSIS editor commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@27b77a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-08-20 12:58:06.602
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-08-20 12:58:06.603
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.osgi 4 0 2016-08-20 12:58:07.415
+!MESSAGE An error occurred while automatically activating bundle net.sf.eclipsensis (1026).
+!STACK 0
+org.osgi.framework.BundleException: Exception in net.sf.eclipsensis.EclipseNSISPlugin.start() of bundle net.sf.eclipsensis.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:792)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:721)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:936)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:319)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571)
+	at org.eclipse.osgi.container.Module.start(Module.java:439)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:320)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:36)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:391)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:337)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at net.sf.eclipsensis.installoptions.InstallOptionsPlugin.<init>(InstallOptionsPlugin.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.loadBundleActivator(BundleContextImpl.java:755)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:706)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:936)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:319)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571)
+	at org.eclipse.osgi.container.Module.start(Module.java:439)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:393)
+	at org.eclipse.core.internal.runtime.InternalPlatform.start(InternalPlatform.java:919)
+	at org.eclipse.core.internal.plugins.PluginDescriptor.doPluginActivation(PluginDescriptor.java:360)
+	at org.eclipse.core.internal.plugins.PluginDescriptor.getPlugin(PluginDescriptor.java:340)
+	at org.eclipse.core.runtime.Platform.getPlugin(Platform.java:743)
+	at org.eclipse.core.internal.preferences.legacy.InitLegacyPreferences.init(InitLegacyPreferences.java:44)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper.applyRuntimeDefaults(PreferenceServiceRegistryHelper.java:147)
+	at org.eclipse.core.internal.preferences.PreferencesService.applyRuntimeDefaults(PreferencesService.java:368)
+	at org.eclipse.core.internal.preferences.DefaultPreferences.applyRuntimeDefaults(DefaultPreferences.java:221)
+	at org.eclipse.core.internal.preferences.DefaultPreferences.load(DefaultPreferences.java:274)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.create(EclipsePreferences.java:409)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:670)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:812)
+	at org.eclipse.core.internal.preferences.AbstractScope.getNode(AbstractScope.java:38)
+	at org.eclipse.core.runtime.preferences.DefaultScope.getNode(DefaultScope.java:76)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.getDefaultPreferences(ScopedPreferenceStore.java:253)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.getPreferenceNodes(ScopedPreferenceStore.java:289)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.contains(ScopedPreferenceStore.java:356)
+	at net.sf.eclipsensis.startup.FileAssociationChecker.initializePreference(FileAssociationChecker.java:197)
+	at net.sf.eclipsensis.startup.FileAssociationChecker.addExtension(FileAssociationChecker.java:181)
+	at net.sf.eclipsensis.startup.FileAssociationChecker.loadExtensions(FileAssociationChecker.java:125)
+	at net.sf.eclipsensis.startup.FileAssociationChecker.<init>(FileAssociationChecker.java:96)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:184)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.WorkbenchPlugin$1.run(WorkbenchPlugin.java:294)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:52)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:289)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.getExecutableExtension(EarlyStartupRunnable.java:119)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:67)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$56.run(Workbench.java:2755)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: org.eclipse.core.runtime.CoreException: EclipseNSIS only supports Windows NT 4.0, Windows 2000, Windows XP, Windows Server 2003, Windows Vista, Windows Server 2008 and Windows 7.
+	at net.sf.eclipsensis.EclipseNSISPlugin.validateOS(EclipseNSISPlugin.java:441)
+	at net.sf.eclipsensis.EclipseNSISPlugin.start(EclipseNSISPlugin.java:114)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:771)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:764)
+	... 67 more
+Caused by: java.lang.RuntimeException: EclipseNSIS only supports Windows NT 4.0, Windows 2000, Windows XP, Windows Server 2003, Windows Vista, Windows Server 2008 and Windows 7.
+	at net.sf.eclipsensis.EclipseNSISPlugin.validateOS(EclipseNSISPlugin.java:442)
+	... 72 more
+Root exception:
+org.eclipse.core.runtime.CoreException: EclipseNSIS only supports Windows NT 4.0, Windows 2000, Windows XP, Windows Server 2003, Windows Vista, Windows Server 2008 and Windows 7.
+	at net.sf.eclipsensis.EclipseNSISPlugin.validateOS(EclipseNSISPlugin.java:441)
+	at net.sf.eclipsensis.EclipseNSISPlugin.start(EclipseNSISPlugin.java:114)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:771)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:764)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:721)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:936)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:319)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571)
+	at org.eclipse.osgi.container.Module.start(Module.java:439)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:320)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:36)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:391)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:337)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at net.sf.eclipsensis.installoptions.InstallOptionsPlugin.<init>(InstallOptionsPlugin.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.loadBundleActivator(BundleContextImpl.java:755)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:706)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:936)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:319)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571)
+	at org.eclipse.osgi.container.Module.start(Module.java:439)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:393)
+	at org.eclipse.core.internal.runtime.InternalPlatform.start(InternalPlatform.java:919)
+	at org.eclipse.core.internal.plugins.PluginDescriptor.doPluginActivation(PluginDescriptor.java:360)
+	at org.eclipse.core.internal.plugins.PluginDescriptor.getPlugin(PluginDescriptor.java:340)
+	at org.eclipse.core.runtime.Platform.getPlugin(Platform.java:743)
+	at org.eclipse.core.internal.preferences.legacy.InitLegacyPreferences.init(InitLegacyPreferences.java:44)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper.applyRuntimeDefaults(PreferenceServiceRegistryHelper.java:147)
+	at org.eclipse.core.internal.preferences.PreferencesService.applyRuntimeDefaults(PreferencesService.java:368)
+	at org.eclipse.core.internal.preferences.DefaultPreferences.applyRuntimeDefaults(DefaultPreferences.java:221)
+	at org.eclipse.core.internal.preferences.DefaultPreferences.load(DefaultPreferences.java:274)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.create(EclipsePreferences.java:409)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:670)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:812)
+	at org.eclipse.core.internal.preferences.AbstractScope.getNode(AbstractScope.java:38)
+	at org.eclipse.core.runtime.preferences.DefaultScope.getNode(DefaultScope.java:76)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.getDefaultPreferences(ScopedPreferenceStore.java:253)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.getPreferenceNodes(ScopedPreferenceStore.java:289)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.contains(ScopedPreferenceStore.java:356)
+	at net.sf.eclipsensis.startup.FileAssociationChecker.initializePreference(FileAssociationChecker.java:197)
+	at net.sf.eclipsensis.startup.FileAssociationChecker.addExtension(FileAssociationChecker.java:181)
+	at net.sf.eclipsensis.startup.FileAssociationChecker.loadExtensions(FileAssociationChecker.java:125)
+	at net.sf.eclipsensis.startup.FileAssociationChecker.<init>(FileAssociationChecker.java:96)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:184)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.WorkbenchPlugin$1.run(WorkbenchPlugin.java:294)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:52)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:289)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.getExecutableExtension(EarlyStartupRunnable.java:119)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:67)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$56.run(Workbench.java:2755)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.RuntimeException: EclipseNSIS only supports Windows NT 4.0, Windows 2000, Windows XP, Windows Server 2003, Windows Vista, Windows Server 2008 and Windows 7.
+	at net.sf.eclipsensis.EclipseNSISPlugin.validateOS(EclipseNSISPlugin.java:442)
+	... 72 more
+
+!ENTRY org.eclipse.core.runtime 4 2 2016-08-20 12:58:07.421
+!MESSAGE Problems encountered starting up plug-in: "org.osgi.framework.BundleException: Error starting module.".
+!STACK 0
+org.osgi.framework.BundleException: Error starting module.
+	at org.eclipse.osgi.container.Module.doStart(Module.java:580)
+	at org.eclipse.osgi.container.Module.start(Module.java:439)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:393)
+	at org.eclipse.core.internal.runtime.InternalPlatform.start(InternalPlatform.java:919)
+	at org.eclipse.core.internal.plugins.PluginDescriptor.doPluginActivation(PluginDescriptor.java:360)
+	at org.eclipse.core.internal.plugins.PluginDescriptor.getPlugin(PluginDescriptor.java:340)
+	at org.eclipse.core.runtime.Platform.getPlugin(Platform.java:743)
+	at org.eclipse.core.internal.preferences.legacy.InitLegacyPreferences.init(InitLegacyPreferences.java:44)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper.applyRuntimeDefaults(PreferenceServiceRegistryHelper.java:147)
+	at org.eclipse.core.internal.preferences.PreferencesService.applyRuntimeDefaults(PreferencesService.java:368)
+	at org.eclipse.core.internal.preferences.DefaultPreferences.applyRuntimeDefaults(DefaultPreferences.java:221)
+	at org.eclipse.core.internal.preferences.DefaultPreferences.load(DefaultPreferences.java:274)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.create(EclipsePreferences.java:409)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:670)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:812)
+	at org.eclipse.core.internal.preferences.AbstractScope.getNode(AbstractScope.java:38)
+	at org.eclipse.core.runtime.preferences.DefaultScope.getNode(DefaultScope.java:76)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.getDefaultPreferences(ScopedPreferenceStore.java:253)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.getPreferenceNodes(ScopedPreferenceStore.java:289)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.contains(ScopedPreferenceStore.java:356)
+	at net.sf.eclipsensis.startup.FileAssociationChecker.initializePreference(FileAssociationChecker.java:197)
+	at net.sf.eclipsensis.startup.FileAssociationChecker.addExtension(FileAssociationChecker.java:181)
+	at net.sf.eclipsensis.startup.FileAssociationChecker.loadExtensions(FileAssociationChecker.java:125)
+	at net.sf.eclipsensis.startup.FileAssociationChecker.<init>(FileAssociationChecker.java:96)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:184)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.WorkbenchPlugin$1.run(WorkbenchPlugin.java:294)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:52)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:289)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.getExecutableExtension(EarlyStartupRunnable.java:119)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:67)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$56.run(Workbench.java:2755)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.NoClassDefFoundError: net/sf/eclipsensis/job/JobScheduler
+	at net.sf.eclipsensis.installoptions.InstallOptionsPlugin.<init>(InstallOptionsPlugin.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.loadBundleActivator(BundleContextImpl.java:755)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:706)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:936)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:319)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571)
+	... 40 more
+Caused by: java.lang.ClassNotFoundException: An error occurred while automatically activating bundle net.sf.eclipsensis (1026).
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:116)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:320)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:36)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:391)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:337)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 51 more
+Caused by: org.osgi.framework.BundleException: Exception in net.sf.eclipsensis.EclipseNSISPlugin.start() of bundle net.sf.eclipsensis.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:792)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:721)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:936)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:319)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571)
+	at org.eclipse.osgi.container.Module.start(Module.java:439)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	... 60 more
+Caused by: org.eclipse.core.runtime.CoreException: EclipseNSIS only supports Windows NT 4.0, Windows 2000, Windows XP, Windows Server 2003, Windows Vista, Windows Server 2008 and Windows 7.
+	at net.sf.eclipsensis.EclipseNSISPlugin.validateOS(EclipseNSISPlugin.java:441)
+	at net.sf.eclipsensis.EclipseNSISPlugin.start(EclipseNSISPlugin.java:114)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:771)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:764)
+	... 67 more
+Caused by: java.lang.RuntimeException: EclipseNSIS only supports Windows NT 4.0, Windows 2000, Windows XP, Windows Server 2003, Windows Vista, Windows Server 2008 and Windows 7.
+	at net.sf.eclipsensis.EclipseNSISPlugin.validateOS(EclipseNSISPlugin.java:442)
+	... 72 more
+Root exception:
+java.lang.NoClassDefFoundError: net/sf/eclipsensis/job/JobScheduler
+	at net.sf.eclipsensis.installoptions.InstallOptionsPlugin.<init>(InstallOptionsPlugin.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.loadBundleActivator(BundleContextImpl.java:755)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:706)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:936)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:319)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571)
+	at org.eclipse.osgi.container.Module.start(Module.java:439)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.start(EquinoxBundle.java:393)
+	at org.eclipse.core.internal.runtime.InternalPlatform.start(InternalPlatform.java:919)
+	at org.eclipse.core.internal.plugins.PluginDescriptor.doPluginActivation(PluginDescriptor.java:360)
+	at org.eclipse.core.internal.plugins.PluginDescriptor.getPlugin(PluginDescriptor.java:340)
+	at org.eclipse.core.runtime.Platform.getPlugin(Platform.java:743)
+	at org.eclipse.core.internal.preferences.legacy.InitLegacyPreferences.init(InitLegacyPreferences.java:44)
+	at org.eclipse.core.internal.preferences.PreferenceServiceRegistryHelper.applyRuntimeDefaults(PreferenceServiceRegistryHelper.java:147)
+	at org.eclipse.core.internal.preferences.PreferencesService.applyRuntimeDefaults(PreferencesService.java:368)
+	at org.eclipse.core.internal.preferences.DefaultPreferences.applyRuntimeDefaults(DefaultPreferences.java:221)
+	at org.eclipse.core.internal.preferences.DefaultPreferences.load(DefaultPreferences.java:274)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.create(EclipsePreferences.java:409)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.internalNode(EclipsePreferences.java:670)
+	at org.eclipse.core.internal.preferences.EclipsePreferences.node(EclipsePreferences.java:812)
+	at org.eclipse.core.internal.preferences.AbstractScope.getNode(AbstractScope.java:38)
+	at org.eclipse.core.runtime.preferences.DefaultScope.getNode(DefaultScope.java:76)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.getDefaultPreferences(ScopedPreferenceStore.java:253)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.getPreferenceNodes(ScopedPreferenceStore.java:289)
+	at org.eclipse.ui.preferences.ScopedPreferenceStore.contains(ScopedPreferenceStore.java:356)
+	at net.sf.eclipsensis.startup.FileAssociationChecker.initializePreference(FileAssociationChecker.java:197)
+	at net.sf.eclipsensis.startup.FileAssociationChecker.addExtension(FileAssociationChecker.java:181)
+	at net.sf.eclipsensis.startup.FileAssociationChecker.loadExtensions(FileAssociationChecker.java:125)
+	at net.sf.eclipsensis.startup.FileAssociationChecker.<init>(FileAssociationChecker.java:96)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:184)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.WorkbenchPlugin$1.run(WorkbenchPlugin.java:294)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:52)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:289)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.getExecutableExtension(EarlyStartupRunnable.java:119)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:67)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$56.run(Workbench.java:2755)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+Caused by: java.lang.ClassNotFoundException: An error occurred while automatically activating bundle net.sf.eclipsensis (1026).
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:116)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:531)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:324)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:320)
+	at org.eclipse.osgi.internal.loader.sources.SingleSourcePackage.loadClass(SingleSourcePackage.java:36)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:391)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:345)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:337)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:160)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 51 more
+Caused by: org.osgi.framework.BundleException: Exception in net.sf.eclipsensis.EclipseNSISPlugin.start() of bundle net.sf.eclipsensis.
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:792)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:721)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:936)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:319)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:571)
+	at org.eclipse.osgi.container.Module.start(Module.java:439)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:454)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:107)
+	... 60 more
+Caused by: org.eclipse.core.runtime.CoreException: EclipseNSIS only supports Windows NT 4.0, Windows 2000, Windows XP, Windows Server 2003, Windows Vista, Windows Server 2008 and Windows 7.
+	at net.sf.eclipsensis.EclipseNSISPlugin.validateOS(EclipseNSISPlugin.java:441)
+	at net.sf.eclipsensis.EclipseNSISPlugin.start(EclipseNSISPlugin.java:114)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:771)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:764)
+	... 67 more
+Caused by: java.lang.RuntimeException: EclipseNSIS only supports Windows NT 4.0, Windows 2000, Windows XP, Windows Server 2003, Windows Vista, Windows Server 2008 and Windows 7.
+	at net.sf.eclipsensis.EclipseNSISPlugin.validateOS(EclipseNSISPlugin.java:442)
+	... 72 more
+!SESSION 2016-08-20 12:58:30.045 -----------------------------------------------
+eclipse.buildId=4.4.1.M20140925-0400
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_AR
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product -data C:\Users\user\Desktop\AgendaTP1\Agenda -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jpt.dbws.eclipselink.ui 4 0 2016-08-20 12:58:31.438
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jpt.dbws.eclipselink.ui [394]
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.eclipse.jpt.dbws.eclipselink.ui [osgi.identity; osgi.identity="org.eclipse.jpt.dbws.eclipselink.ui"; type="osgi.bundle"; version:Version="1.1.100.v201308271450"; singleton:="true"] because it is exposed to package 'javax.xml.bind' from resources org.eclipse.osgi [osgi.identity; osgi.identity="org.eclipse.osgi"; type="osgi.bundle"; version:Version="3.10.1.v20140909-1633"; singleton:="true"] and javax.xml.bind [osgi.identity; osgi.identity="javax.xml.bind"; type="osgi.bundle"; version:Version="2.1.9.v201005080401"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.jpt.dbws.eclipselink.ui [osgi.identity; osgi.identity="org.eclipse.jpt.dbws.eclipselink.ui"; type="osgi.bundle"; version:Version="1.1.100.v201308271450"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.eclipse.wst.common.project.facet.ui)(&(bundle-version>=1.3.0)(!(bundle-version>=2.0.0))))
+     |
+    provide: osgi.wiring.bundle: org.eclipse.wst.common.project.facet.ui
+  org.eclipse.osgi [osgi.identity; osgi.identity="org.eclipse.osgi"; type="osgi.bundle"; version:Version="3.10.1.v20140909-1633"; singleton:="true"]
+
+Chain 2:
+  org.eclipse.jpt.dbws.eclipselink.ui [osgi.identity; osgi.identity="org.eclipse.jpt.dbws.eclipselink.ui"; type="osgi.bundle"; version:Version="1.1.100.v201308271450"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.eclipse.persistence.dbws.builder)(&(bundle-version>=2.3.0)(!(bundle-version>=3.0.0))))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="2.6.0.v20140809-296a69f"; osgi.wiring.bundle="org.eclipse.persistence.dbws.builder"
+  org.eclipse.persistence.dbws.builder [osgi.identity; osgi.identity="org.eclipse.persistence.dbws.builder"; type="osgi.bundle"; version:Version="2.6.0.v20140809-296a69f"]
+    import: (osgi.wiring.package=javax.xml.bind)
+     |
+    export: osgi.wiring.package: javax.xml.bind
+  javax.xml.bind [osgi.identity; osgi.identity="javax.xml.bind"; type="osgi.bundle"; version:Version="2.1.9.v201005080401"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.m2e.logback.configuration 2 0 2016-08-20 12:58:32.766
+!MESSAGE Exception while setting up logging:org.eclipse.osgi.internal.framework.EquinoxConfiguration$1 cannot be cast to java.lang.String
+!STACK 0
+java.lang.ClassCastException: org.eclipse.osgi.internal.framework.EquinoxConfiguration$1 cannot be cast to java.lang.String
+	at org.eclipse.m2e.logback.configuration.LogHelper.logJavaProperties(LogHelper.java:26)
+	at org.eclipse.m2e.logback.configuration.LogPlugin.loadConfiguration(LogPlugin.java:189)
+	at org.eclipse.m2e.logback.configuration.LogPlugin.configureLogback(LogPlugin.java:144)
+	at org.eclipse.m2e.logback.configuration.LogPlugin.access$2(LogPlugin.java:107)
+	at org.eclipse.m2e.logback.configuration.LogPlugin$1.run(LogPlugin.java:62)
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+
+!ENTRY org.eclipse.jface 2 0 2016-08-20 12:58:34.871
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-08-20 12:58:34.871
+!MESSAGE A conflict occurred for ALT+C:
+Binding(ALT+C,
+	ParameterizedCommand(Command(org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.copycolumn,Copy,
+		,
+		Category(org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaedtor.10x,ASA 9.x table schema editor,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@172078d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+C,
+	ParameterizedCommand(Command(net.sf.eclipsensis.commands.NSISPopupCompile,Compile,
+		Compile NSIS script,
+		Category(net.sf.eclipsensis.NSISCategory,EclipseNSIS,EclipseNSIS editor commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@e4d252,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-08-20 12:58:37.954
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-08-20 12:58:37.954
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2016-08-20 12:59:03.890 -----------------------------------------------
+eclipse.buildId=4.4.1.M20140925-0400
+java.version=1.8.0_101
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_AR
+Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -data C:\Users\user\Desktop\AgendaTP1\Agenda -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jpt.dbws.eclipselink.ui 4 0 2016-08-20 12:59:05.243
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+org.osgi.framework.BundleException: Could not resolve module: org.eclipse.jpt.dbws.eclipselink.ui [394]
+  Bundle was not resolved because of a uses contraint violation.
+  org.osgi.service.resolver.ResolutionException: Uses constraint violation. Unable to resolve resource org.eclipse.jpt.dbws.eclipselink.ui [osgi.identity; osgi.identity="org.eclipse.jpt.dbws.eclipselink.ui"; type="osgi.bundle"; version:Version="1.1.100.v201308271450"; singleton:="true"] because it is exposed to package 'javax.xml.bind' from resources org.eclipse.osgi [osgi.identity; osgi.identity="org.eclipse.osgi"; type="osgi.bundle"; version:Version="3.10.1.v20140909-1633"; singleton:="true"] and javax.xml.bind [osgi.identity; osgi.identity="javax.xml.bind"; type="osgi.bundle"; version:Version="2.1.9.v201005080401"] via two dependency chains.
+
+Chain 1:
+  org.eclipse.jpt.dbws.eclipselink.ui [osgi.identity; osgi.identity="org.eclipse.jpt.dbws.eclipselink.ui"; type="osgi.bundle"; version:Version="1.1.100.v201308271450"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.eclipse.wst.common.project.facet.ui)(&(bundle-version>=1.3.0)(!(bundle-version>=2.0.0))))
+     |
+    provide: osgi.wiring.bundle: org.eclipse.wst.common.project.facet.ui
+  org.eclipse.osgi [osgi.identity; osgi.identity="org.eclipse.osgi"; type="osgi.bundle"; version:Version="3.10.1.v20140909-1633"; singleton:="true"]
+
+Chain 2:
+  org.eclipse.jpt.dbws.eclipselink.ui [osgi.identity; osgi.identity="org.eclipse.jpt.dbws.eclipselink.ui"; type="osgi.bundle"; version:Version="1.1.100.v201308271450"; singleton:="true"]
+    require: (&(osgi.wiring.bundle=org.eclipse.persistence.dbws.builder)(&(bundle-version>=2.3.0)(!(bundle-version>=3.0.0))))
+     |
+    provide: osgi.wiring.bundle; bundle-version:Version="2.6.0.v20140809-296a69f"; osgi.wiring.bundle="org.eclipse.persistence.dbws.builder"
+  org.eclipse.persistence.dbws.builder [osgi.identity; osgi.identity="org.eclipse.persistence.dbws.builder"; type="osgi.bundle"; version:Version="2.6.0.v20140809-296a69f"]
+    import: (osgi.wiring.package=javax.xml.bind)
+     |
+    export: osgi.wiring.package: javax.xml.bind
+  javax.xml.bind [osgi.identity; osgi.identity="javax.xml.bind"; type="osgi.bundle"; version:Version="2.1.9.v201005080401"]
+	at org.eclipse.osgi.container.Module.start(Module.java:434)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1582)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.incStartLevel(ModuleContainer.java:1561)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.doContainerStartLevel(ModuleContainer.java:1533)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1476)
+	at org.eclipse.osgi.container.ModuleContainer$ContainerStartLevel.dispatchEvent(ModuleContainer.java:1)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:340)
+
+!ENTRY org.eclipse.m2e.logback.configuration 2 0 2016-08-20 12:59:06.566
+!MESSAGE Exception while setting up logging:org.eclipse.osgi.internal.framework.EquinoxConfiguration$1 cannot be cast to java.lang.String
+!STACK 0
+java.lang.ClassCastException: org.eclipse.osgi.internal.framework.EquinoxConfiguration$1 cannot be cast to java.lang.String
+	at org.eclipse.m2e.logback.configuration.LogHelper.logJavaProperties(LogHelper.java:26)
+	at org.eclipse.m2e.logback.configuration.LogPlugin.loadConfiguration(LogPlugin.java:189)
+	at org.eclipse.m2e.logback.configuration.LogPlugin.configureLogback(LogPlugin.java:144)
+	at org.eclipse.m2e.logback.configuration.LogPlugin.access$2(LogPlugin.java:107)
+	at org.eclipse.m2e.logback.configuration.LogPlugin$1.run(LogPlugin.java:62)
+	at java.util.TimerThread.mainLoop(Unknown Source)
+	at java.util.TimerThread.run(Unknown Source)
+
+!ENTRY org.eclipse.jface 2 0 2016-08-20 12:59:08.975
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2016-08-20 12:59:08.975
+!MESSAGE A conflict occurred for ALT+C:
+Binding(ALT+C,
+	ParameterizedCommand(Command(org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaeditor.copycolumn,Copy,
+		,
+		Category(org.eclipse.datatools.enablement.sybase.asa.schemaobjecteditor.examples.tableschemaedtor.10x,ASA 9.x table schema editor,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@155d804,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+C,
+	ParameterizedCommand(Command(net.sf.eclipsensis.commands.NSISPopupCompile,Compile,
+		Compile NSIS script,
+		Category(net.sf.eclipsensis.NSISCategory,EclipseNSIS,EclipseNSIS editor commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1b8f1bd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-08-20 12:59:12.036
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-08-20 12:59:12.036
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
