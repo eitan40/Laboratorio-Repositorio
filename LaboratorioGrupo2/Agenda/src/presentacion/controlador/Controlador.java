@@ -431,14 +431,9 @@ public class Controlador implements ActionListener
 					int anio = this.ventanaPersona.getdCFechaDeCumple().getCalendar().get(Calendar.YEAR);
 
 					String fecha = anio + "-" + mes + "-" + dia;
-					SimpleDateFormat lala = new SimpleDateFormat(fecha);
-					Date f = null;
-					try {
-						f = lala.parse(fecha);
-					} catch (ParseException e1) {
-						// TODO Auto-generated catch block
-						e1.printStackTrace();
-					}
+					Date fechaAux = null;
+					
+					fechaAux = this.obtenerFecha(fecha);
 
 					PersonaDTO personaAux = new PersonaDTO(auxPersona.getIdPersona(),
 							this.ventanaPersona.getTxtNombre().getText(),
@@ -448,11 +443,9 @@ public class Controlador implements ActionListener
 							this.ventanaPersona.getTxtAltura().getText(),
 							this.ventanaPersona.getTxtPiso().getText(), 
 							this.ventanaPersona.getTxtDpto().getText(),
-							auxLocalidad.getId(),
-							//this.ventanaPersona.getCmbxLocalidad().getSelectedItem().toString(), 
+							auxLocalidad.getId(), 
 							this.ventanaPersona.getTxtEmail().getText(), 
-							f, 
-							//this.ventanaPersona.getCmbxTipoDeContacto().getSelectedItem().toString()	
+							fechaAux, 
 							auxTipoDeContacto.getId()
 							);
 						

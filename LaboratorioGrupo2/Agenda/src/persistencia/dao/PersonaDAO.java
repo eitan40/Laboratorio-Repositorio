@@ -1,6 +1,6 @@
 package persistencia.dao;
 
-import java.sql.Date;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -23,7 +23,6 @@ public class PersonaDAO
 		PreparedStatement statement;
 		try 
 		{
-			@SuppressWarnings("deprecation")
 			java.sql.Date sql = new java.sql.Date(persona.getFechaDeCumpleanios().getTime());
 			
 			statement = conexion.getSQLConexion().prepareStatement(insert);
@@ -78,7 +77,6 @@ public class PersonaDAO
 		
 		try 
 		{
-			@SuppressWarnings("deprecation")
 			java.sql.Date sql = new java.sql.Date(persona.getFechaDeCumpleanios().getTime());
 			statement = conexion.getSQLConexion().prepareStatement(update);
 			

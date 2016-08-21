@@ -1,7 +1,5 @@
 package dto;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class PersonaDTO 
@@ -18,7 +16,7 @@ public class PersonaDTO
 	private String email;
 	private Date fechaDeCumpleanios;
 	private Integer tipoDeContacto;
-	private String signo = "";
+	private String signo;
 
 	public PersonaDTO(int idPersona, String n, String ap, String tel, String c, String alt, String p, 
 					String d, Integer l, String em, Date f, Integer tC)
@@ -34,15 +32,9 @@ public class PersonaDTO
 		this.localidad = l;
 		this.email = em;
 		this.fechaDeCumpleanios = f;
-		this.tipoDeContacto = tC;
-	//	this.signo = obtnerSigno();
-				
+		this.tipoDeContacto = tC;	
 	}
 	
-	private String obtnerSigno() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	public int getIdPersona() 
 	{
@@ -145,23 +137,84 @@ public class PersonaDTO
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
 	
-//	public String obtenerSigno()
-//	{
-//		SimpleDateFormat formatoDelTexto = new SimpleDateFormat("yyyy-MM-dd");
-//		Date fecha = null;
-//		try {
-//
-//		    fecha = formatoDelTexto);
-//
-//		} catch (ParseException ex) {
-//
-//		    ex.printStackTrace();
-//		}
-//		
-//		
-//		return "";
-//	}
+	public String getSigno() {
+		signo = this.obtenerSigno(fechaDeCumpleanios);
+		return signo;
+	}
+
+	public void setSigno(String signo) {
+		this.signo = signo;
+	}
+
+	@SuppressWarnings("deprecation")
+	public String obtenerSigno(Date fecha)
+	{
+		switch (fecha.getMonth()+1)
+		{
+			case 1:
+				if (fecha.getDate() >= 21)
+					return "Acuario";
+				else
+					return "Capricornio";
+			case 2:
+				if (fecha.getDate() >= 19)
+					return "Picis";
+				else
+					return "Acuario";
+			case 3:
+				if (fecha.getDate() >= 21)
+					return "Aries";
+				else
+					return "Picis";
+			case 4:
+				if (fecha.getDate() >= 21)
+					return "Tauro";
+				else
+					return "Aries";
+			case 5:
+				if (fecha.getDate() >= 22)
+					return "Geminis";
+				else
+					return "Tauro";
+			case 6:
+				if (fecha.getDate() >= 22)
+					return "Cancer";
+				else
+					return "Geminis";
+			case 7:
+				if (fecha.getDate() >= 23)
+					return "Leo";
+				else
+					return "Cancer";
+			case 8:
+				if (fecha.getDate() >= 24)
+					return "Virgo";
+				else
+					return "Leo";
+			case 9:
+				if (fecha.getDate() >= 24)
+					return "Libra";
+				else
+					return "Virgo";
+			case 10:
+				if (fecha.getDate() >= 24)
+					return "Escorpio";
+				else
+					return "Libra";
+			case 11:
+				if (fecha.getDate() >= 23)
+					return "Sagitario";
+				else
+					return "Escorpio";
+			case 12:
+				if (fecha.getDate() >= 22)
+					return "Capricornio";
+				else
+					return "Sagitario";
+		}
+		return "";
+		
+	}
 	
 }
