@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.2.1.final using JasperReports Library version 6.2.1  -->
-<!-- 2016-08-23T15:35:57 -->
+<!-- 2016-08-23T21:10:15 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteAgenda2" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0f7b0d7b-241e-4f67-a6bb-bd20f0f93f21">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<queryString>
@@ -120,7 +120,7 @@
 		<band height="241" splitType="Stretch">
 			<pieChart>
 				<chart evaluationTime="Report">
-					<reportElement x="120" y="10" width="341" height="220" uuid="775dbca8-8ab2-4827-97ca-7d3f74204f72"/>
+					<reportElement x="120" y="10" width="341" height="220" uuid="f8f8f875-88d8-4901-bf20-ad820260b4d7"/>
 					<chartTitle/>
 					<chartSubtitle/>
 					<chartLegend/>
