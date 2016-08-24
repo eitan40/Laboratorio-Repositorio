@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.1.final using JasperReports Library version 6.2.1  -->
+<!-- 2016-08-23T15:35:57 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteAgenda2" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0f7b0d7b-241e-4f67-a6bb-bd20f0f93f21">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="signo" class="java.lang.String">
+		<fieldDescription><![CDATA[signo]]></fieldDescription>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<fieldDescription><![CDATA[nombre]]></fieldDescription>
+	</field>
+	<field name="apellido" class="java.lang.String">
+		<fieldDescription><![CDATA[apellido]]></fieldDescription>
+	</field>
+	<field name="fechaDeCumpleanios" class="java.util.Date">
+		<fieldDescription><![CDATA[fechaDeCumpleanios]]></fieldDescription>
+	</field>
+	<sortField name="SigosGRP_COUNT" type="Variable"/>
+	<sortField name="signo"/>
+	<group name="SigosGRP">
+		<groupExpression><![CDATA[$F{signo}]]></groupExpression>
+		<groupHeader>
+			<band height="57">
+				<rectangle>
+					<reportElement x="-22" y="5" width="597" height="35" forecolor="#080808" backcolor="#C2C0C0" uuid="ddd546c4-9a33-4635-a33e-eeed5d521815"/>
+				</rectangle>
+				<textField>
+					<reportElement x="0" y="13" width="100" height="17" forecolor="#1A1AC9" uuid="b1f84b3b-84cd-4b25-ba35-34e18a358f01"/>
+					<textElement verticalAlignment="Middle">
+						<font isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{signo}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="61" splitType="Stretch">
+			<frame>
+				<reportElement x="-20" y="0" width="591" height="61" forecolor="#9E9E9E" backcolor="#A6A2A2" uuid="68833c7f-c607-4004-97e0-e03e14ff0263"/>
+				<staticText>
+					<reportElement x="140" y="10" width="341" height="41" uuid="bb32d9e8-9daa-4ef5-9e6a-e4fb957fcce8"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font size="20" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Reporte: Signos del Zodíaco]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="10" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="10" width="135" height="30" uuid="f16d9fc5-75b8-44f5-9514-1156cd16772c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="390" y="10" width="160" height="30" uuid="e422a85b-f2ec-4675-992b-053eb5262202"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha De Cumpleaños]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="195" y="10" width="140" height="30" uuid="cf9a970b-20ba-4d46-80fc-3668cdb57e46"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Apellido]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="23" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-22" y="0" width="597" height="20" uuid="295b27c9-23e8-4878-8218-d76b146f42b2"/>
+			</rectangle>
+			<textField>
+				<reportElement x="0" y="0" width="135" height="20" uuid="23e6e234-4db5-4a03-b202-47229040f673"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="195" y="0" width="130" height="20" isPrintWhenDetailOverflows="true" uuid="75abe225-adbf-4d31-af74-b6e2d0c58a13"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apellido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="390" y="0" width="160" height="20" uuid="26a41d27-ca93-49ce-82bc-7ec34b5327c9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaDeCumpleanios}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="26" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="21" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="241" splitType="Stretch">
+			<pieChart>
+				<chart evaluationTime="Report">
+					<reportElement x="120" y="10" width="341" height="220" uuid="775dbca8-8ab2-4827-97ca-7d3f74204f72"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<pieDataset>
+					<keyExpression><![CDATA[$F{signo}]]></keyExpression>
+					<valueExpression><![CDATA[$V{SigosGRP_COUNT}]]></valueExpression>
+				</pieDataset>
+				<piePlot labelFormat="{0} {2}">
+					<plot/>
+					<itemLabel/>
+				</piePlot>
+			</pieChart>
+		</band>
+	</summary>
+</jasperReport>
